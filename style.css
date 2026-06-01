@@ -21,14 +21,28 @@ text-align:center;
 position:relative;
 }
 
-section::before{
-content:'✦';
-display:block;
-font-size:30px;
-color:#c9a962;
-margin-bottom:20px;
-opacity:0.6;
+/* עיטור לפני כותרות */
+.decorated-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 12px;
 }
+.decorated-title .deco-line {
+  display: block;
+  background: #8b7355;
+  height: 2px;
+  width: 90px;
+  border-radius: 2px;
+}
+.decorated-title img {
+  height: 64px;
+  width: auto;
+  display: block;
+  margin: 0 8px;
+}
+
 
 h2{
 font-family:'Playfair Display',serif;
