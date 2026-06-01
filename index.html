@@ -12,6 +12,20 @@
 </head>
 
 <body>
+<audio id="bg-music" src="assets/music.mp3" autoplay loop preload="auto" style="display:none"></audio>
+<button id="play-music-btn" style="position:fixed;top:20px;left:20px;z-index:9999;display:none">הפעל מוזיקה</button>
+<script>
+  const audio = document.getElementById('bg-music');
+  const btn = document.getElementById('play-music-btn');
+  audio.volume = 0.18;
+  audio.play().catch(() => {
+    btn.style.display = 'block';
+  });
+  btn.onclick = () => {
+    audio.play();
+    btn.style.display = 'none';
+  };
+</script>
 
 <!-- HERO -->
 
