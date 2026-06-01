@@ -21,7 +21,32 @@ text-align:center;
 position:relative;
 }
 
+@font-face {
+  font-family: 'AmaticaSC-Bold';
+  src: url('assets/fonts/AmaticaSC-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DavidLibre-Regular';
+  src: url('assets/fonts/DavidLibre-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* עיטור לפני כותרות */
+h1, h4, h5, h6 {
+  font-family: 'AmaticaSC-Bold', cursive, sans-serif;
+}
+.headline-font {
+  font-family: 'DavidLibre-Regular', serif !important;
+  letter-spacing: 1px;
+}
+.location-detail {
+  font-size: 1.15rem;
+  color: #8b7355;
+  font-weight: normal;
+}
 .decorated-title {
   display: flex;
   align-items: center;
@@ -45,7 +70,7 @@ position:relative;
 
 
 h2{
-font-family:'Playfair Display',serif;
+font-family:'AmaticaSC-Bold', cursive, sans-serif;
 font-size:3rem;
 color:#8b7355;
 margin-bottom:20px;
@@ -114,17 +139,15 @@ padding:20px;
 }
 
 .overlay h1{
-font-family:'Playfair Display',serif;
-font-size:5rem;
-letter-spacing:8px;
-text-shadow:2px 2px 4px rgba(0,0,0,0.5);
-margin:20px 0;
-font-weight:700;
-color:#fff;
+font-family:'AmaticaSC-Bold', cursive, sans-serif;
+}
+.overlay h1#lior-eliasaf {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 5rem;
 }
 
 .overlay h3{
-font-family:'Cormorant Garamond',serif;
+font-family:'AmaticaSC-Bold', cursive, sans-serif;
 letter-spacing:6px;
 font-size:1.5rem;
 text-transform:uppercase;
@@ -138,6 +161,9 @@ font-weight:700;
 margin-top:20px;
 color:#f5f0e8;
 text-shadow:1px 1px 2px rgba(0,0,0,0.5);
+}
+.overlay h1#lior-eliasaf + p {
+  font-size: 2.5rem;
 }
 
 .scroll-btn{
@@ -189,6 +215,18 @@ text-shadow:2px 2px 4px rgba(0,0,0,0.5);
   box-shadow: none;
   border: none;
 }
+.tnx-img {
+  display: block;
+  max-width: 340px;
+  width: 96vw;
+  margin: 0 auto 0 auto;
+  margin-top: -55px;
+  margin-bottom: -50px;
+  padding: 0;
+  /* טשטוש קצוות באמצעות מסכה */
+  -webkit-mask-image: radial-gradient(circle, white 80%, transparent 100%);
+  mask-image: radial-gradient(circle, white 80%, transparent 100%);
+}
 .timer div {
   background: none;
   padding: 0;
@@ -217,7 +255,7 @@ text-shadow:2px 2px 4px rgba(0,0,0,0.5);
   margin: 0;
   text-transform: none;
   letter-spacing: 0;
-  font-family: 'Cormorant Garamond',serif;
+  font-family: 'AmaticaSC-Bold', cursive, sans-serif;
   font-weight: 600;
 }
 
@@ -327,7 +365,7 @@ box-shadow:5px 5px 15px rgba(139,115,85,0.4);
   padding-bottom: 48px;
 }
 .timeline-title {
-  font-family: 'Assistant', 'Arial', sans-serif;
+  font-family: 'AmaticaSC-Bold', cursive, sans-serif;
   font-size: 2.2rem;
   font-weight: 900;
   color: #47502a;
@@ -425,7 +463,7 @@ opacity:0.5;
 }
 
 .schedule h3{
-font-family:'Playfair Display',serif;
+font-family:'AmaticaSC-Bold', cursive, sans-serif;
 font-size:2.5rem;
 color:#c9a962;
 margin-bottom:10px;
@@ -444,25 +482,32 @@ margin-top:40px;
 }
 
 .family-grid > div{
-background:linear-gradient(145deg,#ffffff,#f0e9dd);
-padding:40px 30px;
-border:2px solid #c9a962;
-border-radius:3px;
-min-width:250px;
-box-shadow:3px 3px 10px rgba(139,115,85,0.15);
-position:relative;
+background: #fff8f2;
+padding: 40px 30px;
+border: none;
+box-shadow: 0 4px 24px 0 rgba(201,169,98,0.11), 0 1.5px 6px 0 rgba(139,115,85,0.09);
+border-radius: 24px;
+font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+text-align: center;
+transition: box-shadow 0.2s;
+min-height: 210px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.family-grid > div:hover {
+box-shadow: 0 8px 32px 0 rgba(139,115,85,0.18), 0 2px 8px 0 rgba(201,169,98,0.13);
+}
+.family-grid > div h3 {
+}
+.family-grid > div p {
+  font-family: 'DavidLibre-Regular', serif;
+  font-size: 1.5rem;
+  color: #6b5d4f;
+  margin: 0;
+  letter-spacing: 1px;
 }
 
-.family-grid > div::before{
-content:'✿';
-position:absolute;
-top:10px;
-left:50%;
-transform:translateX(-50%);
-font-size:25px;
-color:#c9a962;
-opacity:0.5;
-}
 
 .rsvp{
 background:linear-gradient(180deg,#ebe5d9 0%,#f5f0e8 100%);
