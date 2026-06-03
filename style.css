@@ -499,8 +499,10 @@ padding-bottom: 30px;
 display:flex;
 justify-content:center;
 gap:60px;
-flex-wrap:wrap;
+flex-wrap:nowrap;
 margin-top:40px;
+overflow-x:auto;
+-webkit-overflow-scrolling:touch;
 }
 
 .family-grid > div{
@@ -520,6 +522,7 @@ justify-content: center;
 .family-grid > div:hover {
 box-shadow: 0 8px 32px 0 rgba(139,115,85,0.18), 0 2px 8px 0 rgba(201,169,98,0.13);
 }
+
 .family-grid > div h3 {
 }
 .family-grid > div p {
@@ -650,7 +653,19 @@ height:220px;
 }
 
 .family-grid{
-gap:30px;
+gap:18px;
+flex-wrap:nowrap;
+overflow-x:auto;
+}
+.family-grid > div{
+min-width:140px;
+padding:18px 8px;
+}
+.family-grid > div h2{
+font-size:1.2rem !important;
+}
+.family-grid > div p{
+font-size:1rem !important;
 }
 
 .family-grid > div{
